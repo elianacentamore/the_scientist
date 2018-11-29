@@ -1,9 +1,11 @@
 <?php
+
+declare(strict_types=1);
 /**
  * Created by PhpStorm.
  * User: eliana.centamore
  * Date: 29-Nov-18
- * Time: 3:46 PM
+ * Time: 3:46 PM.
  */
 
 namespace Tests\Unit\Domain\Article\ListArticles;
@@ -15,9 +17,7 @@ class ListArticlesTest extends TestCase
 {
     /**
      * @test
-     *
      */
-
     public function shouldListArticle()
     {
         $handler = new ListArticles();
@@ -28,7 +28,5 @@ class ListArticlesTest extends TestCase
         ]];
         $data = $handler();
         $this->assertEquals($expectedData, $data);
-
     }
-
 }
